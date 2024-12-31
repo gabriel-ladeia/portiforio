@@ -1,0 +1,165 @@
+/* Definindo margens e preenchimentos zerados para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importando fonte Montserrat */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-image: url('https://media.istockphoto.com/id/1443022226/pt/foto/black-leather-texture-background.jpg?b=1&s=612x612&w=0&k=20&c=f2A8-xxG6V-BQITrK17Mx3IAfvEfUvg8V8CDZ9hjTGk=');
+    background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir toda a tela */
+    background-position: center;
+    color: #d6d6d6;
+}
+.bem-vindo {
+    font-size: 2rem; /* Ajuste conforme necessário */
+    font-weight: bold; /* Torna o texto em negrito */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento abaixo, se necessário */
+}
+
+/* Estilos para o título */
+.titulo {
+    display: inline-block;
+    margin: 3%;
+    color: #fff;
+}
+
+.btn-container {
+    position: fixed;
+    top: 8%;
+    left: 40%;
+    transform: translateX(150%);
+    /*Corrigidoparacentralizarcorretamente*/z-index: 10;
+    /*Ficaacimadeoutroselementos*/display: flex;
+    /*Alinhaosbotõesemlinha*/gap: 2%;
+    /*Espaçoentreosbotões*/;
+    -webkit-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
+}
+
+.centralizado {
+    text-align: center;
+    margin-top: 1%; /* Pode ser ajustado conforme necessário */
+    margin-bottom: 0; /* Remove espaço abaixo */
+}
+
+.imagem-centralizada {
+    display: block;
+    margin: 1% auto;
+    width: 30%; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+.btn-topo {
+    width: 79px; /* Largura definida */
+    height: 30px; /* Corrigido para um valor fixo */
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #61494950;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10%; /* Bordas arredondadas */
+}
+
+.btn-topo:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2%;
+    left: -2%;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10%;
+}
+
+.btn-topo:active {
+    color: #000;
+}
+
+.btn-topo:hover:before {
+    opacity: 1;
+}
+
+.btn-topo:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.container {
+    margin-top: 0; /* Remove espaço acima da container */
+    padding-top: 0; /* Remove qualquer preenchimento */
+}
+
+.texto-digitado {
+    font-size: 2rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden; /* Você pode ajustar ou remover esta propriedade, conforme necessário */
+}
+
+#sobre-mim, #projetos, #contato {
+    background: none; /* Remove o fundo */
+    color: #fff; /* Altera a cor do texto */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+#projetos .projeto {
+    margin-bottom: 20%;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    position: fixed; /* Fixa o footer na tela */
+    bottom: 0; /* Coloca o footer na parte inferior */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total da página */
+    
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 1% 0; /* Espaçamento interno */
+    z-index: 10; /* Para garantir que fique acima de outros elementos */
+}
